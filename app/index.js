@@ -6,12 +6,14 @@ import './style/main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Button} from './button';
+import {Image} from './image';
 
 ReactDOM.render(
   <div>
     <h1>Hello, world!</h1>
     <p className="output">The time now is: <span>{moment().format()}</span></p>
     <Button/>
+    <Image/>
   </div>
   ,
   document.getElementById('root')

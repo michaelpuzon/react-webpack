@@ -64,6 +64,12 @@ module.exports = {
           path.resolve(__dirname, 'app')
         ]
       }, {
+        test: /\.(jpg|jpeg|png|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[hash].[ext]',
+        }
+      }, {
         test: /\.json$/,
         loader: "json-loader"
       }
