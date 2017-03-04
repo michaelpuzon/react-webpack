@@ -67,7 +67,7 @@ module.exports = {
   //entry: './app/index.js',
   entry: "./app/index.js",
   plugins: [
-    new ExtractTextPlugin('[name].[chunkhash].css'),
+    new ExtractTextPlugin('[name].[contenthash].css'),
     new HtmlWebpackPlugin({
       template: 'index.template.ejs',
       inject: 'body',
