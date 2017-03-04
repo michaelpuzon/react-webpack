@@ -1,21 +1,10 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   module: {
     rules: [
-      /*
-      {
-        test: /\.css$/,
-        //use: 'css-loader'
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            { loader: "css-loader", options: { sourceMap: true } }
-          ]
-        })
-      }, {
-      */
       {
         test: /(\.css|\.scss)$/,
         use: ExtractTextPlugin.extract({
@@ -78,11 +67,16 @@ module.exports = {
   //entry: './app/index.js',
   entry: "./app/index.js",
   plugins: [
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('[name].[chunkhash].css'),
+    new HtmlWebpackPlugin({
+      template: 'index.template.ejs',
+      inject: 'body',
+    })
   ],
   devtool: 'cheap-module-source-map',
   output: {
-    filename: 'bundle.js',
+    //filename: 'bundle.js',
+    filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: "/dist/"
   }
