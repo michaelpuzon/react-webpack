@@ -75,9 +75,8 @@ module.exports = {
   ],
   devtool: 'cheap-module-source-map',
   output: {
-    //filename: 'bundle.js',
     filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: "/dist/"
+    //publicPath: "/dist/"
   }
 };
