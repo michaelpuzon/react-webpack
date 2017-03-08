@@ -24,6 +24,7 @@
     "html-webpack-plugin": "^2.28.0",
     "http-server": "^0.9.0",
     "node-sass": "^4.5.0",
+    "redux-devtools": "^3.3.2",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.2",
     "style-loader": "^0.13.1",
@@ -36,6 +37,8 @@
     "purecss": "^0.6.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-router": "^3.0.2"
+    "react-redux": "^5.0.3",
+    "react-router": "^3.0.2",
+    "redux": "^3.6.0"
   }
 }

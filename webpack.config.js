@@ -64,8 +64,8 @@ module.exports = {
       }
     ]
   },
-  //entry: './app/index.js',
-  entry: "./app/index.js",
+  entry: './app/index.js',
+  //entry: "./app/redux-sample.js",
   plugins: [
     new ExtractTextPlugin('[name].[contenthash].css'),
     new HtmlWebpackPlugin({
