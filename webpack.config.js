@@ -59,6 +59,9 @@ module.exports = {
           name: '[path][name].[hash].[ext]',
         }
       }, {
+        test: /\.(woff|woff2|eot|ttf)$/,
+        loader: 'url-loader?limit=100000'
+      }, {
         test: /\.json$/,
         loader: "json-loader"
       }
