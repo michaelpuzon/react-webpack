@@ -13,7 +13,6 @@ export class Main extends React.Component {
   render() {
     return (
       <div>
-        <Link to="/button">Link to button</Link>
         <Link to="/redux">Link to redux</Link>
         <h1>Hello, world!</h1>
         <p className="output">The time now is: <span>{moment().format()}</span></p>

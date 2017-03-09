@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Counter } from './counter';
-import todoApp from './redux/reducers';
+import { incrementCounter, decrementCounter } from './redux/actions/index';
+
 
 
 class ReduxComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {num: 0};
   }
 
   render() {
@@ -15,37 +15,39 @@ class ReduxComponent extends React.Component {
     <div>
       <Counter
         value={this.props.data}
-        onIncrement={() => {this.props.onIncrement()}}
-        onDecrement={() => {this.props.onDecrement()}}
+        onIncrement={() => {this.props.onIncrement(2)}}
+        onDecrement={() => {this.props.onDecrement(3)}}
       />
-      <p>number: {this.state.num}</p>
     </div>
 
     );
   }
 }
 
-
 const mapStateToProps = (state) => {
   return {
-    data: state
+    data: state.counter.value
   }
 };
 
 const mapDispatchToProps = {
-  onIncrement:  (id) => ({
-    type: 'INCREMENT',
-    id
-  }),
-  onDecrement:  (id) => ({
-    type: 'DECREMENT',
-    id
-  })
+  onIncrement:  incrementCounter,
+  onDecrement:  decrementCounter
 };
 
-const ReduxSample = connect(
+const mapDispatchToProps2 = (dispatch, ownProps) => {
+  return {
+    onIncrement: (amount) => {
+      dispatch(incrementCounter(amount));
+    },
+    onDecrement: (amount) => {
+      dispatch(decrementCounter(amount));
+    }
+  };
+};
+
+export const ReduxSample = connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps2
 )(ReduxComponent);
 
-export default ReduxSample;
