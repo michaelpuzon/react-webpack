@@ -4,11 +4,10 @@ import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory, hashHistory } from 'react-router';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
-import {Main} from './main'
-import {Button} from './button';
-import {ReduxSample} from './redux-sample3';
+import {Main} from './main/'
+import {ReduxSample} from './counter/';
 import './style/main.scss';
-import sampleApp from './redux/reducers';
+import sampleApp from './root-reducer';
 
 let store = createStore(sampleApp);
 
