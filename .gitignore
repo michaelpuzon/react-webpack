@@ -1,3 +1,4 @@
 /node_modules
 /dist
-
+lint.html
+npm-debug.log
