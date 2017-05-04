@@ -67,8 +67,10 @@ module.exports = {
       }
     ]
   },
-  entry: './app/index.js',
-  //entry: "./app/redux-sample.js",
+  entry: './app/index.jsx',
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   plugins: [
     new ExtractTextPlugin('[name].[contenthash].css'),
     new HtmlWebpackPlugin({
