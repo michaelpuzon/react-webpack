@@ -40,7 +40,7 @@ module.exports = {
           ]
         })
       }, {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         loader: 'babel-loader',
         query: {
           presets: [
@@ -82,6 +82,6 @@ module.exports = {
   output: {
     filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
-    //publicPath: "/dist/"
+    // publicPath: "/dist/"
   }
 };

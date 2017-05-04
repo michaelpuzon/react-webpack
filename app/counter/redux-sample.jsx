@@ -1,13 +1,15 @@
+/* global document:true */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
-import {Counter} from './counter';
-import counterReducer from './redux/counter';
+import Counter from './counter';
+import counterReducer from './reducers/counter';
 
 const store = createStore(counterReducer);
 const rootEl = document.getElementById('root');
 
-const render = () => ReactDOM.render(
+ReactDOM.render(
   <Counter
     value={store.getState()}
     onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
@@ -16,8 +18,5 @@ const render = () => ReactDOM.render(
   rootEl
 );
 
-render();
-store.subscribe(render);
+// store.subscribe(render);
 
-
-//

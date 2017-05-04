@@ -1,23 +1,13 @@
-export function addTodo(text) {
-  return { type: ADD_TODO, text }
-}
-
-export function incrementCounter (amount) {
-  console.log('increment called from actions');
+export function incrementCounter(amount) {
   return {
     type: 'INCREMENT',
-    amount: amount
+    amount
   };
 }
 
-export function decrementCounter (amount) {
-  console.log('increment called from actions');
+export function decrementCounter(amount) {
   return {
     type: 'DECREMENT',
-    amount: amount
+    amount
   };
-}
-
-export function toggleTodo(index) {
-  return { type: TOGGLE_TODO, index }
 }

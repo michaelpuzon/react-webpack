@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import todos from './counter/reducers/todo';
+import jobs from './main/reducers/jobs';
 import counter from './counter/reducers/counter';
 
 const sampleApp = combineReducers({
   counter,
-  todos
+  jobs
 });
 
-export default sampleApp
+export default sampleApp;
