@@ -5,6 +5,11 @@ Here are some of the features included:
 2. ESLint for code linting
 3. JEST for unit testing
 
+To Get Started, Install dependencies by running this command.
+```
+npm install
+```
+
 To Test and Develop. Web server will be accessed via http://localhost:8080
 ```
 npm run start
