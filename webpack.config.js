@@ -1,5 +1,5 @@
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -8,10 +8,10 @@ module.exports = {
       {
         test: /(\.css|\.scss)$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
+          fallback: 'style-loader',
           use: [
             {
-              loader: "css-loader",
+              loader: 'css-loader',
               options: {
                 sourceMap: true,
                 //modules: true,
@@ -32,7 +32,7 @@ module.exports = {
             },
             */
             {
-              loader: "sass-loader",
+              loader: 'sass-loader',
               options: {
                 sourceMap: true
               }
@@ -63,7 +63,7 @@ module.exports = {
         loader: 'url-loader?limit=100000'
       }, {
         test: /\.json$/,
-        loader: "json-loader"
+        loader: 'json-loader'
       }
     ]
   },
