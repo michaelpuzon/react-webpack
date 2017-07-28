@@ -1,5 +1,5 @@
 # react-webpack
-Baseline react webpack project that supports SCSS and ES6 out of the box. 
+Baseline react webpack project that supports PostCSS and ES7 out of the box. 
 Here are some of the features included:
 1. Redux store and thunk for async operations.
 2. ESLint for code linting
