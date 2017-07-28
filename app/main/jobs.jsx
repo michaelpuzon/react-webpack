@@ -15,8 +15,7 @@ class JobsComponent extends React.Component {
         <h3>Jobs List</h3>
 
         <ul className="category-list">
-
-          {this.props.jobs.map(job =>
+          {this.props.jobs.map(job => (
             <li key={job.id}>
               <p>
                 <a className="re-order-icon" href={job.url}>
@@ -26,7 +25,7 @@ class JobsComponent extends React.Component {
                 {job.description}
               </p>
             </li>
-          )}
+          ))}
         </ul>
       </div>
     );

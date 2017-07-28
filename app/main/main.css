@@ -1,6 +1,6 @@
 .output{
   color: red;
-  span {
+  & span {
     font-weight: bold;
   }
 }
@@ -8,7 +8,7 @@
   color: brown;
 }
 .main {
-  img {
+  & img {
     width: 200px;
   }
 }
