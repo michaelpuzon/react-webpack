@@ -3,7 +3,7 @@
 import 'purecss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
@@ -19,10 +19,12 @@ const store = createStore(
 ReactDOM.render(
   (
     <Provider store={store}>
-      <Router history={browserHistory}>
-        <Route path="/" component={Main} />
-        <Route path="/redux" component={ReduxSample} />
-      </Router>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={Main} />
+          <Route path="/redux" component={ReduxSample} />
+        </Switch>
+      </BrowserRouter>
     </Provider>
   ),
   document.getElementById('root')

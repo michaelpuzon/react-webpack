@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import 'purecss';
 import Button from './button';
 import img1 from './images/IMG_358113.jpg';

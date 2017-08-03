@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import Counter from './counter';
 import { incrementCounter, decrementCounter } from './actions/';
 
@@ -47,4 +48,4 @@ const ReduxSample = connect(
   mapDispatchToProps2
 )(ReduxComponent);
 
-export default ReduxSample;
+export default withRouter(ReduxSample);
